@@ -11,7 +11,7 @@ Summary: Memray is a memory profiler for Python
 
 Development: https://github.com/bloomberg/memray
 
-Documentation: https://bloomberg.github.io/memray/
+Documentation: https://bloomberg.github.io/memray
 
 Memray is a memory profiler for Python. It can track memory allocations in
 Python code, in native extension modules, and in the Python interpreter
