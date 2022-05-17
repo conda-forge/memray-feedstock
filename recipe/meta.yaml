@@ -28,7 +28,7 @@ requirements:
     - lz4-c
   run:
     - python
-    - rich <11.0.0
+    - rich
     - jinja2
     - typing-extensions  # [py<38]
 
