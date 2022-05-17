@@ -1,5 +1,5 @@
 {% set name = "memray" %}
-{% set version = "1.0.3" %}
+{% set version = "1.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: cfff403e1a25a61265547fe7ba696bd08bbbce93400444d66b4025cb4adc6e88
+  sha256: 876e46e0cd42394be48b33f81314bc946f4eb023b04bf1def084c25ccf1d2bb6
 
 build:
-  skip: True  # [not linux]
+  skip: true  # [not linux]
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   build:
@@ -41,7 +41,7 @@ test:
 
 about:
   home: https://github.com/bloomberg/memray
-  summary: 'Memray is a memory profiler for Python'
+  summary: Memray is a memory profiler for Python
   description: |
     Memray is a memory profiler for Python. It can track memory allocations in
     Python code, in native extension modules, and in the Python interpreter
@@ -50,7 +50,7 @@ about:
     it can also be used as a library to perform more fine-grained profiling
     tasks.
   license: Apache-2.0 AND BSD-3-Clause
-  license_file: 
+  license_file:
     - LICENSE
     - src/vendor/libbacktrace/LICENSE
   doc_url: https://bloomberg.github.io/memray/
