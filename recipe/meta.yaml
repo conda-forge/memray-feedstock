@@ -10,9 +10,9 @@ source:
   sha256: 92a94234c3bde9cefe89766b31c3e5df3331bd3cf781de6957caf7de62e7e200
 
 build:
-  skip: true  # [not linux]
+  skip: true  # [win]
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -23,7 +23,7 @@ requirements:
   host:
     - python
     - pip
-    - libunwind
+    - libunwind  # [linux]
     - cython
     - lz4-c
   run:
