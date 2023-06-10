@@ -1,5 +1,5 @@
 {% set name = "memray" %}
-{% set version = "1.7.0" %}
+{% set version = "1.8.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: cc3b114d24828edaafc31bc19effb90530e7df38e37f100a0f6f03a2584976d4
+  sha256: e89ff735268676c94bb1a03f6cd1c40f1c9081a4614905ad29f87b71b8ba12a5
 
 build:
   skip: true  # [win]
