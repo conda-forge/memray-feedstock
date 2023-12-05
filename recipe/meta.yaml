@@ -29,6 +29,7 @@ requirements:
   host:
     - python
     - pip
+    - pkgconfig
     - libunwind  # [linux]
     - cython
     - lz4-c
