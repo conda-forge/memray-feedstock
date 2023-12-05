@@ -25,6 +25,7 @@ requirements:
     - cython                                 # [build_platform != target_platform]
     - make
     - sysroot_linux-64 2.17  # [linux64]
+    - pkgconfig
   host:
     - python
     - pip
