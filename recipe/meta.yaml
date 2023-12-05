@@ -35,9 +35,9 @@ requirements:
     - lz4-c
   run:
     - python
-    - rich >= 11.2.0
+    - rich >=11.2.0
     - jinja2
-    - textual >= 0.34.0
+    - textual >=0.34.0
     - typing-extensions  # [py<38]
 
 test:
