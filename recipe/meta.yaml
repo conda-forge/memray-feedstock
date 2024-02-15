@@ -1,5 +1,5 @@
 {% set name = "memray" %}
-{% set version = "1.10.0" %}
+{% set version = "1.11.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 38322e052b882790993412f1840517a51818aa55c47037f69915b2007f2c4cee
+  sha256: f72c111a4868d0f2b4e4fb9ba4da736db8c73b6fb0ac6e6f2deca8ee540eb688
 
 build:
   skip: true  # [win]
@@ -25,16 +25,19 @@ requirements:
     - cython                                 # [build_platform != target_platform]
     - make
     - sysroot_linux-64 2.17  # [linux64]
+    - pkgconfig
   host:
     - python
     - pip
+    - pkgconfig
     - libunwind  # [linux]
     - cython
     - lz4-c
   run:
     - python
-    - rich
+    - rich >=11.2.0
     - jinja2
+    - textual >=0.34.0
     - typing-extensions  # [py<38]
 
 test:
