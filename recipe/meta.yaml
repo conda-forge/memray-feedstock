@@ -27,7 +27,7 @@ requirements:
     - make
     - pkgconfig
   host:
-    - elfutils
+    - elfutils  # [linux]
     - python
     - pip
     - pkgconfig
