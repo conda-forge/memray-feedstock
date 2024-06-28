@@ -1,5 +1,5 @@
 {% set name = "memray" %}
-{% set version = "1.12.0" %}
+{% set version = "1.13.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 3b61c199a60197ae6164a2b44cd828c52de24083ecc49e9ac7d6287686bd68f3
+  sha256: 355803182ea4a61dcb456c4c1e765f929123fc2b6998ba44efa4ae32b763e05b
 
 build:
   skip: true  # [win]
@@ -19,12 +19,12 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - cython                                 # [build_platform != target_platform]
     - make
-    - sysroot_linux-64 2.17  # [linux64]
     - pkgconfig
   host:
     - python
