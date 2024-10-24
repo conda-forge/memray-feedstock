@@ -30,6 +30,7 @@ requirements:
     - elfutils  # [linux]
     - python
     - pip
+    - setuptools
     - pkgconfig
     - libunwind  # [linux]
     - cython
