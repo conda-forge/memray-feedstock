@@ -13,8 +13,9 @@ build:
   skip: true  # [win]
   script:
     - export CFLAGS="${CFLAGS} -pthread"  # [aarch64 or ppc64le]
+    - export LDFLAGS="${LDFLAGS} -pthread"  # [aarch64 or ppc64le]
     - {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -30,6 +31,7 @@ requirements:
     - elfutils  # [linux]
     - python
     - pip
+    - setuptools
     - pkgconfig
     - libunwind  # [linux]
     - cython
