@@ -23,7 +23,7 @@ elfutils:
 libunwind:
 - '1.6'
 lz4_c:
-- 1.9.3
+- '1.10'
 pin_run_as_build:
   python:
     min_pin: x.x
