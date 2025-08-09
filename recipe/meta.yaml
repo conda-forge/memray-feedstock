@@ -1,5 +1,5 @@
 {% set name = "memray" %}
-{% set version = "1.17.2" %}
+{% set version = "1.18.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: eb75c075874a6eccddf361513d9d4a9223dd940580c6370a6ba5339bae5d0ba2
+  sha256: 44160b46f0eca0d468f7d7ae8cc43245f8ff03bf9694db6a6e0bf54f88e7caa2
 
 build:
   skip: true  # [win]
@@ -15,7 +15,7 @@ build:
     - export CFLAGS="${CFLAGS} -pthread"  # [aarch64 or ppc64le]
     - export LDFLAGS="${LDFLAGS} -pthread"  # [aarch64 or ppc64le]
     - {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   build:
