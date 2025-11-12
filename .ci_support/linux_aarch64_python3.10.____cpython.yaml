@@ -17,7 +17,7 @@ cxx_compiler_version:
 docker_image:
 - quay.io/condaforge/linux-anvil-aarch64:alma9
 elfutils:
-- '0.192'
+- '0.193'
 libunwind:
 - '1.8'
 lz4_c:

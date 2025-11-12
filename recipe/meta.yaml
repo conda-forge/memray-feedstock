@@ -12,10 +12,10 @@ source:
 build:
   skip: true  # [win]
   script:
-    - export CFLAGS="${CFLAGS} -pthread"  # [aarch64 or ppc64le]
-    - export LDFLAGS="${LDFLAGS} -pthread"  # [aarch64 or ppc64le]
+    - export CFLAGS="${CFLAGS} -pthread"  # [aarch64]
+    - export LDFLAGS="${LDFLAGS} -pthread"  # [aarch64]
     - {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   build:
