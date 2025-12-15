@@ -17,9 +17,9 @@ build:
   skip: win
   script:
     - if: aarch64
-      then: export CFLAGS="${CFLAGS} -pthread"
-    - if: aarch64
-      then: export LDFLAGS="${LDFLAGS} -pthread"
+      then:
+        - export CFLAGS="${CFLAGS} -pthread"
+        - export LDFLAGS="${LDFLAGS} -pthread"
     - ${{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -28,22 +28,21 @@ requirements:
     - ${{ stdlib("c") }}
     - ${{ compiler('cxx') }}
     - if: build_platform != target_platform
-      then: python
-    - if: build_platform != target_platform
-      then: cross-python_${{ target_platform }}
-    - if: build_platform != target_platform
-      then: cython
+      then:
+        - python
+        - cross-python_${{ target_platform }}
+        - cython
     - make
     - pkgconfig
   host:
     - if: linux
-      then: elfutils
+      then:
+        - elfutils
+        - libunwind
     - python
     - pip
     - setuptools
     - pkgconfig
-    - if: linux
-      then: libunwind
     - cython
     - lz4-c
   run:
@@ -51,18 +50,13 @@ requirements:
     - rich >=11.2.0
     - jinja2
     - textual >=0.34.0
-    - if: match(python, "<3.8")
-      then: typing-extensions
 
 tests:
   - python:
       imports:
         - memray
-  - requirements:
-      run:
-        - pip
-    script:
-      - pip check
+      pip_check: true
+  - script:
       - memray -h
 
 about:
