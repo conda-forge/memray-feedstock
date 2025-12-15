@@ -20,7 +20,6 @@ analyze the captured memory usage data. While commonly used as a CLI tool,
 it can also be used as a library to perform more fine-grained profiling
 tasks.
 
-
 Current build status
 ====================
 
