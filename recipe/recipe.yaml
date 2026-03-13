@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: memray
-  version: 1.19.1
+  version: "1.19.2"
 
 package:
   name: ${{ name|lower }}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 7fcf306eae2c00144920b01913f42fa7f235af7a80fa3226ab124672a5cb1d8f
+  sha256: 680cb90ac4564d140673ac9d8b7a7e07a8405bd1fb8f933da22616f93124ca84
 
 build:
-  number: 3
+  number: 0
   skip: win
   script:
     - if: aarch64
