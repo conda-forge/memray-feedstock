@@ -9,7 +9,7 @@ package:
   version: ${{ version }}
 
 source:
-  url: https://files.pythonhosted.org/packages/99/3b/8f9736cbf698e62cb7efb0e1715a30d6d06b3cffd980b435209eb522d5f8/memray-${{ version }}.tar.gz
+  url: https://pypi.org/packages/source/m/memray/memray-${{ version }}.tar.gz
   sha256: ce1f1d900948d57d7db5b5d8d81f4ebfcb798eff674493503ce5bfaafcea84dc
 
 build:
