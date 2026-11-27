@@ -13,7 +13,7 @@ source:
   sha256: cd8f6bb76f35b40242e64f69353880d3b6da772f82f715ef218c706534af46da
 
 build:
-  number: 0
+  number: 1
   skip: win
   script:
     - if: aarch64
